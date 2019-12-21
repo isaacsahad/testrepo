@@ -1,0 +1,177 @@
+[staticMenu topMenuLeft]
+code = "main-menu-left"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[staticMenu topMenuRight]
+code = "main-menu-right"
+
+[staticMenu]
+code = "blog-categories"
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Tesseract - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="newwebsite">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+
+    <!-- Style -->
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Theme CSS -->
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid1">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Tesseract</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    {% partial 'menu-items' items=topMenuLeft.menuItems class='nav navbar-nav' %}
+                    {% partial 'menu-items' items=topMenuRight.menuItems class='nav navbar-nav navbar-right' %}
+                </div>
+            </div>
+        </div>
+
+    {# CONTENT #}
+    </div>
+        {# Main Banner #}
+        <div class="container-fluid banner-container">
+            <div class="bgImage">
+
+            </div>
+        </div>
+    <div class="container">
+        {# Page Header #} <div class="container">
+
+            <div class="page-header">
+                <h2>Overview <small>Basic concepts</small></h2>
+            </div>
+            <p>
+                This page demonstrates the basic CMS features.
+                Usually each page built with October is a combination of a layout, page, partials and content blocks,
+                although in simple cases you can just use a page without anything else.
+            </p>
+
+            <!-- Layouts -->
+            <h3>Layouts</h3>
+            <p class="lead">
+                <i class="icon-th-large"></i> &nbsp; Layouts define the page scaffold.
+            </p>
+            <p>
+                The layout file <code>layouts/default.htm</code> defines the page scaffold &mdash;
+                everything that repeats on each page, such as the HTML, HEAD and BODY tags, StyleSheet and JavaScript
+                references.
+            </p>
+            <p>The page menu and footer in the Demo theme are defined in the layout as well.</p>
+
+            <hr />
+
+            <!-- Pages -->
+            <h3>Pages</h3>
+            <p class="lead">
+                <i class="icon-copy"></i> &nbsp; Pages hold the content for each URL.
+            </p>
+            <p>
+                The page file <code>pages/home.htm</code> defines the page URL (<code>/</code> for this page) and the
+                page content.
+                Pages are rendered inside layouts with this function that should be called in the layout code:
+            </p>
+
+            <p>Using a layout for pages is optional &mdash; you can define everything right in the page file.</p>
+
+            <hr />
+
+            <!-- Partials -->
+            <h3>Partials</h3>
+            <p class="lead">
+                <i class="icon-tags"></i> &nbsp; Partials contain reusable chunks of HTML markup.
+            </p>
+            <p>
+                Partials are chunks of HTML defined in separate files that can be included anywhere.
+                Partials are rendered with:
+            </p>
+
+            <p>You may place partials inside folders too. In this example we placed the footer content to the
+                <code>partials/site/footer.htm</code> partial.</p>
+
+            <p>Partials can be used inside pages, layouts or other partials.</p>
+
+            <hr />
+
+            <!-- Content blocks -->
+            <h3>Content blocks</h3>
+            <p class="lead">
+                <i class="icon-font"></i> &nbsp; Content blocks are text or HTML blocks that can be edited separately
+                from the page or layout.
+            </p>
+            <p>
+                The introductory text used on this page is defined in the <code>content/welcome.htm</code> file.
+                Content blocks are defined and rendered with:
+
+            </p>
+
+            <hr />
+
+            <!-- Placeholders -->
+            <h3>Placeholders</h3>
+            <p class="lead">
+                <i class="icon-bookmark"></i> &nbsp; Placeholders allow pages to inject content to a layout.
+            </p>
+            <p>
+                The common use is injecting page-specific links to StyleSheet or JavaScript files to the HEAD tag
+                defined in the layout.
+                Placeholders are defined in the layout file and they have names so that they can be referred in the
+                page.
+                Example:
+            </p>
+
+
+            <hr />
+
+            <!-- Assets -->
+            <h3>Assets</h3>
+            <p class="lead">
+                <i class="icon-picture"></i> &nbsp; Assets are resource files like images and stylesheets.
+            </p>
+            <p>This theme stores its asset files (JavaScript, StyleSheet, images, fonts, etc) in the
+                <code>themes/demo/assets</code> directory. This theme is also packaged with these useful 3rd party
+                tools:</p>
+            <ul class="list-inline">
+                <li><a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
+                <li><a target="_blank" href="http://fontawesome.io/3.2.1/">Font Awesome</a></li>
+                <li><a target="_blank" href="http://www.google.com/fonts/specimen/Lato">Lato webfont</a></li>
+            </ul>
+            <p>You might prefer to remove them for your website implementation.</p>
+        </div>
+
+        <!-- JS Section -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

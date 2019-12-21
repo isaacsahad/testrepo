@@ -1,0 +1,45 @@
+html {
+    font-family: sans-serif;    
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;    
+  }
+  body {
+    color: white;
+    margin: 0;
+    background-color: #262d33;
+  }
+.jumbotron {
+      background-color: #FC0;
+  }
+
+
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar {
+    background-color: #FC0;
+    padding: 0px;
+}
+.fill {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('path/to/image.jpg');
+}
+
+.banner-container{
+  padding-left: unset;
+  padding-right: unset;
+}
+
+.bgImage{
+  background-image: url('/themes/new/assets/Images/main-banner.jpeg');
+  height: 950px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
