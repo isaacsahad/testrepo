@@ -1,18 +1,19 @@
 html {
-    font-family: sans-serif;    
+    font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;    
-  }
-  body {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
     color: white;
     margin: 0;
     background-color: #262d33;
-  }
+}
+
 .jumbotron {
-      background-color: #FC0;
-  }
-
-
+    background-color: #FC0;
+    color: black;
+}
 
 .container-fluid {
     padding-right: 15px;
@@ -25,6 +26,7 @@ html {
     background-color: #FC0;
     padding: 0px;
 }
+
 .fill {
     overflow: hidden;
     background-size: cover;
@@ -32,14 +34,14 @@ html {
     background-image: url('path/to/image.jpg');
 }
 
-.banner-container{
-  padding-left: unset;
-  padding-right: unset;
+.banner-container {
+    padding-left: unset;
+    padding-right: unset;
 }
 
-.bgImage{
-  background-image: url('/themes/new/assets/Images/main-banner.jpeg');
-  height: 950px;
-  background-size: cover;
-  background-repeat: no-repeat;
+.bgImage {
+    background-image: url('/themes/new/assets/Images/main-banner.jpeg');
+    height: 950px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
